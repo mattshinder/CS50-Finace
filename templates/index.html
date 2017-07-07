@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Symbol</th> 
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    {% for s in stocks %}
+    <tr>   
+        <td>{{s['symbol']}}</td>
+        <td>{{s['number']}}</td>
+        <td>{{s['price']}}</td>
+        <td>{{s['total']}}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+    <td colspan="3">CASH</td>
+    <td>{{cash}}</td>
+    </tr>
+{% endblock %}
+</table>
