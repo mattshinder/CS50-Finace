@@ -5,6 +5,7 @@ from passlib.apps import custom_app_context as pwd_context
 from tempfile import mkdtemp
 import re
 import psycopg2
+import os
 
 from helpers import *
 
